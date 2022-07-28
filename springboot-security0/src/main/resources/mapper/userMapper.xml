@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.feng.dao.UserDao">
+
+    <resultMap id="userMap" type="com.feng.beans.SysUser">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <collection property="roles" ofType="com.feng.beans.SysRole">
+            <result column="name" property="name"/>
+        </collection>
+    </resultMap>
+
+    <select id="findByUsername" resultMap="userMap">
+        select u.*,r.name
+        from sys_user u
+        left join sys_role_user sru
+        on u.id = sru.u_id
+        left join sys_role r
+        on r.id = sru.r_id
+        where u.username = #{username}
+    </select>
+</mapper>

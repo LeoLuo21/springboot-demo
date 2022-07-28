@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.feng</groupId>
+    <artifactId>springboot-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+    <modules>
+        <module>springboot-security0</module>
+        <module>springboot-shiro0</module>
+        <module>springboot-dubbo0</module>
+        <module>dubbo-common-api</module>
+        <module>springboot-dubbo-consumer</module>
+        <module>springboot-cache0</module>
+        <module>springboot-kafka</module>
+        <module>springboot-rabbitmq</module>
+        <module>springboot-activemq</module>
+        <module>springboot-redis</module>
+        <module>springboot-highCon</module>
+    </modules>
+    <packaging>pom</packaging>
+
+</project>

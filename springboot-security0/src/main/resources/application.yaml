@@ -1,0 +1,10 @@
+logging:
+  level:
+    org.springframework.security: info
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+server:
+  port: 8081
